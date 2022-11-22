@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://raw.githubusercontent.com/Mikael61/Mikael61.github.io/master/skos-styleList.xsl"?>
+<!DOCTYPE rdf:RDF SYSTEM "https://raw.githubusercontent.com/Mikael61/Mikael61.github.io/master/skos.dtd">
+<rdf:RDF 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    
+    <skos:ConceptScheme rdf:about="MyScheme">
+        <dc:title>Barnlitteratur/Children's literature</dc:title> 
+        <dc:description>Exempel på en kontrollerad vokabulär över termer, genrer och begrepp kopplade till barnlitteratur för åldrarna 0–12, med fokus på fiktion. Vokabulären riktar sig till barn och föräldrar som besöker bibliotekets barnbokssamling.</dc:description>
+        <dc:creator>Martina Jansson</dc:creator>
+    </skos:ConceptScheme>
+   
+   <skos:Concept rdf:about="#barnböcker">
+       <skos:prefLabel>Barnböcker</skos:prefLabel>
+       <skos:altLabel xml:lang="en">Children's books</skos:altLabel>
+       <skos:scopeNote>Här asyftas specifika former av böcker som riktar sig till barn, utan att specifikt åsyfta ämnen och innehåll.</skos:scopeNote>
+       <skos:narrower rdf:resource="#bilderböcker"/>
+       <skos:narrower rdf:resource="#kapitelböcker"/>
+       <skos:related rdf:resource="#barnboksgenrer"/>
+   </skos:Concept>
+    
+    <skos:Concept rdf:about="#bilderböcker">
+        <skos:prefLabel>Bilderböcker</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Picture books</skos:altLabel>
+        <skos:narrower rdf:resource="#pekböcker"/>
+        <skos:broader rdf:resource="#barnböcker"/>
+        <skos:related rdf:resource="#abc-böcker"/>
+        <skos:definition>Böcker med många illustrationer som är viktiga för innehållet, och som riktar sig till yngre barn. Källa: https://www.ne.se/uppslagsverk/encyklopedi/lång/bilderbok</skos:definition>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#pekböcker">
+        <skos:prefLabel>Pekböcker</skos:prefLabel>
+        <skos:altLabel>Children's picture books</skos:altLabel>
+        <skos:broader rdf:resource="#bilderböcker"/>
+        <skos:example rdf:resource="https://libris.kb.se/bib/8mfs6prj6l5811pf"/>
+        <skos:definition>Bilderböcker i små format, ofta i hållbara material som exempelvis hårdpapp, som riktar sig till de yngsta barnen. Innehåller lite eller ingen text. Källa: https://sv.wikipedia.org/wiki/Bilderbok</skos:definition>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#kapitelböcker">
+        <skos:prefLabel>Kapitelböcker</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Chapter books</skos:altLabel>
+        <skos:broader rdf:resource="#barnböcker"/>
+        <skos:narrower rdf:resource="#lättläst"/>
+        <skos:definition>Berättande böcker skrivna främst i prosa (men med rikligt med illustrationer) avsedda för mellanåldersläsare. Källa: https://sv.wikipedia.org/wiki/Kapitelbok</skos:definition>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#barnboksgenrer">
+        <skos:prefLabel>Barnboksgenrer</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Children's books genres</skos:altLabel>
+        <skos:narrower rdf:resource="#fantasy"/>
+        <skos:narrower rdf:resource="#abc-böcker"/>
+        <skos:narrower rdf:resource="#skräck"/>
+        <skos:narrower rdf:resource="#sagor"/>
+        <skos:narrower rdf:resource="#fabler"/>
+        <skos:narrower rdf:resource="#deckare"/>
+        <skos:narrower rdf:resource="#poesi"/>
+        <skos:related rdf:resource="#barnböcker"/>
+    </skos:Concept>
+    
+    
+    <skos:Concept rdf:about="#fantasy">
+        <skos:prefLabel xml:lang="en">Fantasy</skos:prefLabel>
+        <skos:broader rdf:resource="#barnboksgenrer"/>
+        <skos:definition>Böcker där en avvikande verklighet förekommer, och det övernaturliga och magiska spelar en viktig roll. Ofta är kampen mellan gott och ont central. Källa: https://www.ne.se/uppslagsverk/encyklopedi/enkel/fantasy</skos:definition>
+        <skos:example rdf:resource="https://libris.kb.se/bib/7776072"/>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#skräck">
+        <skos:prefLabel>Skräck</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Horror</skos:altLabel>
+        <skos:altLabel>Rysare</skos:altLabel>
+        <skos:broader rdf:resource="#barnboksgenrer"/>
+        <skos:example rdf:resource="https://libris.kb.se/bib/fqd9k5ckcwtmxblk"/>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#poesi">
+        <skos:prefLabel>Poesi</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Poetry</skos:altLabel>
+        <skos:altLabel>Lyrik</skos:altLabel>
+        <skos:altLabel>Ramsor</skos:altLabel>
+        <skos:broader rdf:resource="#barnboksgenrer"/>
+        <skos:example rdf:resource="http://libris.kb.se/bib/mxpb386vklmf7pw6"/>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#deckare">
+        <skos:prefLabel>Deckare</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Detective stories</skos:altLabel>
+        <skos:broader rdf:resource="#barnboksgenrer"/>
+        <skos:example rdf:resource="https://libris.kb.se/bib/12751422"/>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#abc-böcker">
+        <skos:prefLabel>ABC-böcker</skos:prefLabel>
+        <skos:altLabel xml:lang="en">ABC-books</skos:altLabel>
+        <skos:related rdf:resource="#bilderböcker"/>
+        <skos:broader rdf:resource="#barnboksgenrer"/>
+        <skos:example rdf:resource="https://libris.kb.se/bib/7233077"/>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#lättläst">
+        <skos:prefLabel>Lättläst</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Easy-to-read</skos:altLabel>
+        <skos:narrower rdf:resource="#versalböcker"/>
+        <skos:broader rdf:resource="#kapitelböcker"/>
+        <skos:scopeNote>Här åsyftas kapitelböcker som är skrivna eller bearbetade för barn som lär sig läsa. Underordnat är böcker skrivna i enbart versaler, en kategori av lättlästa böcker.</skos:scopeNote>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#versalböcker">
+        <skos:prefLabel>Versalböcker</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Books in capital letters</skos:altLabel>
+        <skos:broader rdf:resource="#lättläst"/>
+        <skos:example rdf:resource="https://libris.kb.se/bib/20006036"/> 
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#sagor">
+        <skos:prefLabel>Sagor</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Fairy tales</skos:altLabel>
+        <skos:narrower rdf:resource="#folksagor"/>
+        <skos:narrower rdf:resource="#konstsagor"/>
+        <skos:broader rdf:resource="#barnboksgenrer"/>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#folksagor">
+        <skos:prefLabel>Folksagor</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Folk tales</skos:altLabel>
+        <skos:broader rdf:resource="#sagor"/>
+        <skos:definition>Sagor som kommer ur den traditionella, muntliga kulturen med underhållande och osannolikt innehåll. Källa: https://www.ne.se/uppslagsverk/encyklopedi/lång/folksaga</skos:definition>
+        <skos:example rdf:resource="https://libris.kb.se/bib/19802869"/>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#konstsagor">
+        <skos:prefLabel>Konstsagor</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Literary fairy tales</skos:altLabel>
+        <skos:broader rdf:resource="#sagor"/>
+        <skos:definition>Konstsagan har, till skillnad från folksagan, en känd författare. Den berör ofta verkliga platser och personer och behandlar inte sällan frågor av moralisk karaktär. Källa: https://www.ne.se/uppslagsverk/encyklopedi/enkel/konstsaga</skos:definition>
+        <skos:example rdf:resource="https://libris.kb.se/bib/9492635"/>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#teman">
+        <skos:prefLabel>Teman</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Themes</skos:altLabel>
+        <skos:altLabel>Ämnen</skos:altLabel>
+        <skos:scopeNote>Kategorin hänvisar till ett antal av de vanligaste teman som dyker upp i barnbokssamlingen.</skos:scopeNote>
+        <skos:narrower rdf:resource="#kärlek"/>
+        <skos:narrower rdf:resource="#hbtq+"/>
+        <skos:narrower rdf:resource="#döden"/>
+        <skos:narrower rdf:resource="#vänskap"/>
+        <skos:narrower rdf:resource="#mobbning"/>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#kärlek">
+        <skos:prefLabel>Kärlek</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Love</skos:altLabel>
+        <skos:altLabel>Romantik</skos:altLabel>
+        <skos:broader rdf:resource="#teman"/>
+        <skos:example rdf:resource="https://libris.kb.se/bib/8365861"/>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#hbtq+">
+        <skos:prefLabel>HBTQ+</skos:prefLabel>
+        <skos:altLabel xml:lang="en">LGBTQ+</skos:altLabel>
+        <skos:altLabel>HBTQ</skos:altLabel>
+        <skos:broader rdf:resource="#teman"/>
+        <skos:scopeNote>Här åsyftas böcker som har HBTQ+-personer i centrum, eller som på tydligt sätt tematiserar HTBTQ+-frågor.</skos:scopeNote>
+        <skos:definition>Förkortning för homosexuella, bisexuella, transpersoner och queerpersoner samt andra människor som inte vill/kan identifiera sig med en traditionell tvåkönsnorm. Källa: https://www.ne.se/uppslagsverk/encyklopedi/lång/hbtq</skos:definition>
+        <skos:example rdf:resource="https://libris.kb.se/bib/hv4ng5tvfxc88p2j"/>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#döden">
+        <skos:prefLabel>Döden</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Death</skos:altLabel>
+        <skos:broader rdf:resource="#teman"/>
+        <skos:example rdf:resource="https://libris.kb.se/bib/8468274"/>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#vänskap">
+        <skos:prefLabel>Vänskap</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Friendship</skos:altLabel>
+        <skos:altLabel>Kompisar</skos:altLabel>
+        <skos:broader rdf:resource="#teman"/>
+        <skos:example rdf:resource="https://libris.kb.se/bib/17971427"/>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#mobbning">
+        <skos:prefLabel>Mobbning</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Bullying</skos:altLabel>
+        <skos:broader rdf:resource="#teman"/>
+        <skos:example rdf:resource="https://libris.kb.se/bib/7h1jdz3t52ttz9qw"/>
+    </skos:Concept>
+    
+    <skos:Concept rdf:about="#fabler">
+        <skos:prefLabel>Fabler</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Fables</skos:altLabel>
+        <skos:broader rdf:resource="#barnboksgenrer"/>
+        <skos:definition>En fabel är en kort och allegorisk berättelse med förmänskligade djur. Berättelserna slutar med en sensmoral. Källa: https://www.ne.se/uppslagsverk/encyklopedi/lång/fabel</skos:definition>
+        <skos:example rdf:resource="https://libris.kb.se/bib/21635052"/>
+    </skos:Concept>
+</rdf:RDF> 
